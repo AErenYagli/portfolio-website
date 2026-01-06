@@ -1,0 +1,231 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ahmet Eren Yağlı - Bilgisayar Mühendisi | Portföy Web Sitesi">
+    <meta name="keywords" content="yazılım geliştirici, bilgisayar mühendisi, web developer, full-stack, AI/ML">
+    <meta name="author" content="Ahmet Eren Yağlı">
+    <title>Ahmet Eren Yağlı - Bilgisayar Mühendisi | Portföy</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">AEY</div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="skills.html">Yetenekler</a></li>
+                <li><a href="projects.html">Projeler</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Tema Değiştir">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Merhaba, Ben Ahmet Eren Yağlı</h1>
+            <p class="hero-subtitle">Bilgisayar Mühendisi & Full-Stack Developer</p>
+            <p class="hero-description">
+                Web development, mobil uygulama geliştirme ve yapay zeka alanlarında uzmanlaşmış, 
+                yenilikçi çözümler üreten bir yazılım geliştiricisiyim.
+            </p>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn btn-primary">Projelerimi İncele</a>
+                <a href="contact.html" class="btn btn-secondary">İletişime Geç</a>
+            </div>
+            <div class="skills-preview">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">PHP</span>
+                <span class="skill-badge">Laravel</span>
+                <span class="skill-badge">Vue.js</span>
+                <span class="skill-badge">C++</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Overview Section -->
+    <section class="section overview-section">
+        <h2 class="section-title">Hızlı Bakış</h2>
+        <div class="overview-grid">
+            <div class="overview-card fade-in">
+                <i class="fas fa-code"></i>
+                <h3>Full-Stack Development</h3>
+                <p>Laravel, Vue.js, PHP, JavaScript ile modern web uygulamaları geliştiriyorum</p>
+                <a href="skills.html" class="card-link">Yeteneklerimi Gör <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="overview-card fade-in">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile Development</h3>
+                <p>Android platformunda Kotlin ve Java kullanarak mobil uygulamalar geliştiriyorum</p>
+                <a href="projects.html" class="card-link">Projelerimi Gör <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="overview-card fade-in">
+                <i class="fas fa-brain"></i>
+                <h3>AI & Machine Learning</h3>
+                <p>NLP, duygu analizi ve makine öğrenmesi projeleri geliştiriyorum</p>
+                <a href="about.html" class="card-link">Hakkımda <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Preview -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <h2 class="section-title">Öne Çıkan Projeler</h2>
+        <p class="section-subtitle">Son dönemde geliştirdiğim projelerden bazıları</p>
+        
+        <div class="featured-projects fade-in">
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Turkish Q&A System</h3>
+                    <p>Türkçe haber veri seti üzerinde fine-tuning yapılmış soru-cevap sistemi</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Unsloth</span>
+                        <span class="tech-tag">NLP</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image" style="background: var(--gradient-2);">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="project-content">
+                    <h3>E-TurFinSAS</h3>
+                    <p>Twitter verisi ile BIST100 şirketleri için varlık tabanlı duygu analizi sistemi</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Sentiment Analysis</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image" style="background: var(--gradient-3);">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Job Matching Platform</h3>
+                    <p>AI destekli iş ilanı ve CV eşleştirme platformu</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="projects.html" class="btn btn-primary">Tüm Projeleri Gör</a>
+        </div>
+    </section>
+
+    <!-- Experience Highlights -->
+    <section class="section">
+        <h2 class="section-title">Deneyim</h2>
+        <p class="section-subtitle">Çalıştığım şirketler ve kazandığım deneyimler</p>
+        
+        <div class="experience-grid fade-in">
+            <div class="experience-card">
+                <div class="company-logo">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h4>Software Engineer Intern</h4>
+                <p class="company">ODS Consulting</p>
+                <p class="date">Temmuz 2025</p>
+                <p class="description">Laravel, Vue.js, Breeze ve Inertia kullanarak web uygulamaları geliştirdim</p>
+            </div>
+            
+            <div class="experience-card">
+                <div class="company-logo">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h4>Web Developer Intern</h4>
+                <p class="company">MOSK Bilişim</p>
+                <p class="date">Haziran - Ağustos 2024</p>
+                <p class="description">HTML, CSS, Java ile web uygulamaları geliştirdim</p>
+            </div>
+            
+            <div class="experience-card">
+                <div class="company-logo">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h4>Computer Engineer Intern</h4>
+                <p class="company">Bosch</p>
+                <p class="date">Temmuz - Ağustos 2023</p>
+                <p class="description">Power BI sunumları ve Visual Basic uygulamaları geliştirdim</p>
+            </div>
+            
+            <div class="experience-card">
+                <div class="company-logo">
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <h4>Web Developer Intern</h4>
+                <p class="company">DevlopSOFT</p>
+                <p class="date">Nisan - Haziran 2025</p>
+                <p class="description">PHP, JavaScript, HTML, CSS ile web uygulamaları geliştirdim</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content fade-in">
+            <h2>Bir Proje mi Düşünüyorsunuz?</h2>
+            <p>Birlikte harika işler yapabiliriz. Benimle iletişime geçin!</p>
+            <a href="contact.html" class="btn btn-primary">İletişime Geçin</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Ahmet Eren Yağlı. Tüm hakları saklıdır.</p>
+        <p>
+            <a href="https://github.com/AErenYagli" target="_blank">GitHub</a> • 
+            <a href="https://www.linkedin.com/in/ahmet-eren-ya%C4%9Fli-730b751ba/" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
