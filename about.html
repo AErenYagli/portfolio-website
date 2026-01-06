@@ -1,0 +1,277 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ahmet Eren Yağlı - Hakkımda | Bilgisayar Mühendisi">
+    <meta name="keywords" content="hakkımda, eğitim, kariyer, deneyim">
+    <meta name="author" content="Ahmet Eren Yağlı">
+    <title>Hakkımda - Ahmet Eren Yağlı | Bilgisayar Mühendisi</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">AEY</div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html" class="active">Hakkımda</a></li>
+                <li><a href="skills.html">Yetenekler</a></li>
+                <li><a href="projects.html">Projeler</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Tema Değiştir">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1>Hakkımda</h1>
+            <p>Teknoloji tutkunu, öğrenmeye açık ve problem çözmeyi seven bir yazılım geliştiriciyim</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="about-content fade-in">
+            <div class="about-text">
+                <h3>Kim Ben?</h3>
+                <p>
+                    2020 yılından beri Çankaya Üniversitesi'nde Bilgisayar Mühendisliği okuyorum ve mezun olmak üzereyim. 
+                    Web development ve mobil development alanlarına odaklanıyorum. Web geliştirmede hem front-end hem de 
+                    back-end development ile ilgileniyorum. Mobil geliştirmede ise Android platformunda çalışmalar yapıyorum.
+                </p>
+                <p>
+                    Bosch, MOSK Bilişim, DevlopSOFT ve ODS Consulting gibi farklı şirketlerde staj yaparak hem kurumsal 
+                    hem de startup kültürlerinde deneyim kazandım. Bu deneyimler sayesinde farklı çalışma ortamlarına 
+                    hızlıca adapte olabilme yeteneği kazandım.
+                </p>
+                <p>
+                    Yapay zeka ve makine öğrenmesi projelerinde aktif olarak yer alıyorum. TEKNOFEST gibi yarışmalarda 
+                    projeler geliştiriyorum. GitHub'da açık kaynak kod geliştirme yaparak kendimi sürekli geliştiriyorum.
+                </p>
+                <p>
+                    <strong>Kariyer Hedefim:</strong> İşimi en iyi şekilde yaparak, web ve mobil development alanlarında 
+                    kendimi geliştirmeye devam etmek. Yeni teknolojilere ve plugin'lere açık olmak, sürekli öğrenen bir 
+                    geliştirici olmak.
+                </p>
+
+                <!-- Eğitim Timeline -->
+                <div class="education-timeline">
+                    <h3 style="margin: 2rem 0 1.5rem;">Eğitim</h3>
+                    <div class="timeline-item">
+                        <h4>Bilgisayar Mühendisliği</h4>
+                        <p class="date">Eylül 2020 - Haziran 2025 (Mezun)</p>
+                        <p>Çankaya Üniversitesi, Ankara - GPA: 3.07/4.00</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Fen Lisesi</h4>
+                        <p class="date">Eylül 2016 - Haziran 2020</p>
+                        <p>Bursa Kültür Okulları, Bursa - Diploma Notu: 98.15/100</p>
+                    </div>
+                </div>
+
+                <!-- İş Deneyimi -->
+                <div class="experience-section">
+                    <h3 style="margin: 3rem 0 1.5rem;">İş Deneyimi</h3>
+                    <div class="experience-grid">
+                        <div class="experience-card">
+                            <div class="company-logo">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h4>Software Engineer Intern</h4>
+                            <p class="company">ODS Consulting</p>
+                            <p class="date">Temmuz 2025</p>
+                            <p class="description">Laravel framework kullanarak PHP ile projeler geliştirdim. Vue, HTML, CSS, Breeze ve Inertia teknolojilerini kullandım.</p>
+                        </div>
+                        
+                        <div class="experience-card">
+                            <div class="company-logo">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4>Web Developer Intern</h4>
+                            <p class="company">DevlopSOFT</p>
+                            <p class="date">Nisan - Haziran 2025</p>
+                            <p class="description">HTML, CSS, PHP ve JavaScript programlama dilleri kullanarak web uygulamaları geliştirdim.</p>
+                        </div>
+                        
+                        <div class="experience-card">
+                            <div class="company-logo">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h4>Web Developer Intern</h4>
+                            <p class="company">MOSK Bilişim Teknolojileri</p>
+                            <p class="date">Haziran - Ağustos 2024</p>
+                            <p class="description">HTML, CSS ve Java programlama dilleri kullanarak web uygulamaları geliştirdim.</p>
+                        </div>
+                        
+                        <div class="experience-card">
+                            <div class="company-logo">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h4>Computer Engineer Intern</h4>
+                            <p class="company">Bosch San. ve Tic. A.Ş.</p>
+                            <p class="date">Temmuz - Ağustos 2023</p>
+                            <p class="description">Toplantılara katılarak iş hayatının nasıl işlediğini öğrendim. Microsoft Office uygulamaları ve Power BI kullanarak sunumlar hazırladım. Visual Basic programlama dili kullanarak uygulamalar geliştirdim.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sertifikalar -->
+                <div class="experience-section">
+                    <h3 style="margin: 3rem 0 1.5rem;">Sertifikalar & Eğitimler</h3>
+                    <div class="timeline-item">
+                        <h4>Garanti BBVA Genç - Yeni Nesil Kariyer Okulu</h4>
+                        <p class="date">Aralık 2025</p>
+                        <p>Teknoloji Serisi: Geleceğin Teknolojileri, ChatGPT Kullanımı ve Prompt Mühendisliği, GenAI, Temel Makine Öğrenmesi</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>TÜBİTAK BİLGEM YTE Bootcamp 2023</h4>
+                        <p class="date">Kasım 2023</p>
+                        <p>Java Eğitimi</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Temelden İleriye SQL Eğitimi</h4>
+                        <p class="date">Mayıs 2022</p>
+                        <p>IEEE Gazi University - Basic to Advanced SQL</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Programmer Camp</h4>
+                        <p class="date">Şubat 2022</p>
+                        <p>Python, Java, C# - Sıfırdan ileri seviyeye programlama eğitimi</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Unity C# Game Development</h4>
+                        <p class="date">Ağustos 2021</p>
+                        <p>Unity ve C# ile oyun geliştirme</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Softtech - Agile 101</h4>
+                        <p class="date">Mayıs 2025</p>
+                        <p>Agile metodolojileri ve Scrum framework eğitimi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-info">
+                <div class="info-item">
+                    <i class="fas fa-user"></i>
+                    <span class="label">İsim:</span>
+                    <span class="value">Ahmet Eren Yağlı</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span class="label">Doğum Tarihi:</span>
+                    <span class="value">28 Şubat 2002</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="label">Konum:</span>
+                    <span class="value">Etimesgut, Ankara</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="label">Eğitim:</span>
+                    <span class="value">Bilgisayar Mühendisliği</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span class="label">E-posta:</span>
+                    <span class="value">
+                        <a href="mailto:aerenyagli@gmail.com">aerenyagli@gmail.com</a>
+                    </span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span class="label">Telefon:</span>
+                    <span class="value">0542 491 64 75</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span class="label">Durum:</span>
+                    <span class="value">Mezun - İş Arıyorum</span>
+                </div>
+                
+                <!-- İlgi Alanları -->
+                <div style="margin-top: 2rem;">
+                    <h4 style="margin-bottom: 1rem; color: var(--accent-primary);">İlgi Alanlarım</h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span class="interest-tag"><i class="fas fa-gamepad"></i> Bilgisayar Oyunları</span>
+                        <span class="interest-tag"><i class="fas fa-book"></i> Kitap Okumak</span>
+                        <span class="interest-tag"><i class="fas fa-users"></i> Takım Sporları</span>
+                        <span class="interest-tag"><i class="fas fa-code"></i> Yazılım Geliştirme</span>
+                    </div>
+                </div>
+                
+                <!-- Diller -->
+                <div style="margin-top: 2rem;">
+                    <h4 style="margin-bottom: 1rem; color: var(--accent-primary);">Diller</h4>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>🇹🇷 Türkçe</span>
+                            <span>Ana Dil</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>🇬🇧 İngilizce</span>
+                            <span>İleri Seviye</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>🇩🇪 Almanca</span>
+                            <span>Başlangıç</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Diğer Aktiviteler -->
+                <div style="margin-top: 2rem;">
+                    <h4 style="margin-bottom: 1rem; color: var(--accent-primary);">Ek Aktiviteler</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                        <strong>Öğrenci Asistanlığı:</strong> Öğretmenlerimle çalışarak farklı perspektifler kazanıyor, 
+                        iyi ilişkiler kurarak daha fazla öğrenmeye devam ediyorum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Ahmet Eren Yağlı. Tüm hakları saklıdır.</p>
+        <p>
+            <a href="https://github.com/AErenYagli" target="_blank">GitHub</a> • 
+            <a href="https://www.linkedin.com/in/ahmet-eren-ya%C4%9Fli-730b751ba/" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
