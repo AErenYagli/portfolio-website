@@ -1,0 +1,344 @@
+<!-- projects.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ahmet Eren Yağlı - Projeler | Portfolio">
+    <meta name="keywords" content="projeler, portfolio, yazılım projeleri">
+    <meta name="author" content="Ahmet Eren Yağlı">
+    <title>Projeler - Ahmet Eren Yağlı | Bilgisayar Mühendisi</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">AEY</div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="skills.html">Yetenekler</a></li>
+                <li><a href="projects.html" class="active">Projeler</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Tema Değiştir">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1>Projeler</h1>
+            <p>Geliştirdiğim ve katkıda bulunduğum projelerden öne çıkanlar</p>
+        </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="section">
+        <div class="filter-buttons fade-in">
+            <button class="filter-btn active" data-filter="all">Tümü</button>
+            <button class="filter-btn" data-filter="ai">AI/ML</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+            <button class="filter-btn" data-filter="competition">Yarışmalar</button>
+            <button class="filter-btn" data-filter="other">Diğer</button>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section">
+        <div class="projects-grid fade-in">
+
+            <!-- Proje 1: E-TurFinSAS -->
+            <div class="project-card" data-category="ai">
+                <div class="project-image" style="background: var(--gradient-3);">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="project-content">
+                    <h3>E-TurFinSAS</h3>
+                    <p>
+                        Bu proje, Borsa İstanbul'da (BIST100) listelenen ilk 100 şirket hakkında Twitter X'te 
+                        paylaşılan tweet'leri toplamayı ve bu veriler üzerinde varlık tabanlı duygu analizi yapmayı 
+                        amaçlamaktadır. Tweet'ler, şirketlerin sosyal medya algısını ve piyasa dinamiklerini analiz 
+                        etmek için pozitif, negatif veya nötr olarak sınıflandırılacaktır. Bu yaklaşım, yatırımcılara 
+                        ve analistlere trend tahmininde yardımcı olurken, şirketlere marka stratejileri konusunda 
+                        destek sağlayacaktır. Ayrıca, finansal krizlere karşı erken uyarı sistemleri geliştirerek 
+                        karar destek mekanizmalarını güçlendirecektir.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Sentiment Analysis</span>
+                        <span class="tech-tag">Twitter API</span>
+                        <span class="tech-tag">Financial Analysis</span>
+                        <span class="tech-tag">Data Mining</span>
+                        <span class="tech-tag">Web Scraping</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/CankayaUniversity/ceng-407-408-2024-2025-e-TurFinSAS-Entity-Based-Turkish-Financial-Sentiment-Analysis-System" class="project-link github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proje 2: TEKNOFEST 2024 -->
+            <div class="project-card" data-category="competition">
+                <div class="project-image" style="background: var(--gradient-2);">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <div class="project-content">
+                    <h3>TEKNOFEST 2024 - Ulaşımda Yapay Zeka</h3>
+                    <p>
+                        "Ulaşımda Yapay Zeka" alanında katıldığımız bu yarışmada, uçan araçların çevresel farkındalık 
+                        yeteneklerini geliştirmek amacıyla sensör ve kamera verilerini değerlendiren çeşitli algoritmalar 
+                        üzerine araştırma yapmaya devam etmeyi hedefliyoruz.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">AI</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">Sensor Fusion</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Algorithm Research</span>
+                    </div>
+                    <!--<div class="project-links">
+                        <a href="https://github.com/yourusername/teknofest-2024" class="project-link github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>-->
+                </div>
+            </div>
+
+            <!-- Proje 3: Name Entity Recognition -->
+            <div class="project-card" data-category="ai">
+                <div class="project-image" style="background: var(--gradient-3);">
+                    <i class="fas fa-tag"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Name Entity Recognition (NER)</h3>
+                    <p>
+                        Veri setinden POS (Part-of-Speech) ve etiketleri alarak bir model eğittik. 
+                        Metinlerdeki önemli varlıkları (kişi, yer, organizasyon vb.) otomatik olarak 
+                        tanıyan ve sınıflandıran doğal dil işleme projesi.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">POS Tagging</span>
+                        <span class="tech-tag">Named Entity Recognition</span>
+                    </div>
+                    <!--<div class="project-links">
+                        <a href="https://github.com/yourusername/ner-project" class="project-link github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>-->
+                </div>
+            </div>
+
+            <!-- Proje 4: Turkish Q&A Project -->
+            <div class="project-card" data-category="ai">
+                <div class="project-image">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Turkish Q&A Project</h3>
+                    <p>
+                        Türkçe haber veri seti üzerinde (35,200 örnek, 11 kategori) soru-cevap görevi için 
+                        Unsloth kullanarak fine-tuning yaptık. Veri ön işleme, eğitim ve değerlendirme aşamalarını 
+                        yönettik. Model, Türkçe talimat tabanlı yanıtlar üretir.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Unsloth</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Fine-tuning</span>
+                        <span class="tech-tag">Turkish Language</span>
+                    </div>
+                    <!--<div class="project-links">
+                        <a href="https://github.com/yourusername/turkish-qa" class="project-link github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>-->
+                </div>
+            </div>
+
+            <!-- Proje 5: Student Assistantship -->
+            <div class="project-card" data-category="other">
+                <div class="project-image" style="background: var(--gradient-2);">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Student Assistantship (Öğrenci Asistanlığı)</h3>
+                    <p>
+                        Öğretmenlerimle çalışarak tüm perspektifleri görmek için deneyim kazanıyorum. 
+                        Ayrıca, öğretmenlerimle iyi bir ilişki kurmak ve onlardan daha fazla şey öğrenmek 
+                        için çalışıyorum. Bu deneyim, öğretim ve mentorluk becerilerimi geliştirmeme yardımcı oluyor.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Teaching</span>
+                        <span class="tech-tag">Mentoring</span>
+                        <span class="tech-tag">Communication</span>
+                        <span class="tech-tag">Academic Support</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proje 7: Design and Implement a room booking site with C# Razor Pages -->
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <i class="fas fa-hotel"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Room Booking Site with C# Razor Pages</h3>
+                    <p>
+                        HTML ve harici CSS kullanarak C# Razor Pages ile oda rezervasyon sitesi tasarladım ve uyguladım. 
+                        Bu projede yeni diller öğrenerek yazılım konusunda kendimi geliştirdim. Farklı bir alanı deneme 
+                        fırsatı buldum ve bu deneyim kariyerimle ilgili daha net kararlar almama yardımcı oldu.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Razor Pages</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">ASP.NET</span>
+                    </div>
+                    <!--<div class="project-links">
+                        <a href="https://github.com/yourusername/room-booking" class="project-link github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>-->
+                </div>
+            </div>
+
+            <!-- Proje 7: Job Posting and CV Matching Platform -->
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Job Posting and CV Matching Platform</h3>
+                    <p>
+                        Profesyonel iş ilanı web sitelerine benzer kapsamlı bir eşleştirme platformu geliştirdim. 
+                        Kullanıcılar CV yükleyebilir, işverenler iş ilanlarını paylaşabilir ve AI destekli otomatik 
+                        eşleştirme yapılabilir. Platform, kullanıcıların başkalarının CV'lerini uygun pozisyonlar 
+                        için önerebileceği ve başarılı eşleştirmeler için platform içi ödüller kazanabileceği bir 
+                        referans sistemi içerir. Laravel framework kullanarak RESTful API backend'i, Vue.js ile 
+                        interaktif frontend arayüzü ve Laravel Breeze ile kimlik doğrulama sistemi kurdum. 
+                        PHP, JavaScript, HTML5, CSS3 ve MySQL teknolojileri kullandım. CV'lerine göre kullanıcılara 
+                        otomatik olarak ilgili iş ilanlarını öneren makine öğrenmesi tabanlı eşleştirme motoru 
+                        uyguladım ve gamification unsurlarıyla kullanıcı katılımını artırdım.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">RESTful API</span>
+                        <span class="tech-tag">Laravel Breeze</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                    <!--<div class="project-links">
+                        <a href="https://github.com/yourusername/job-matching-platform" class="project-link github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>-->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Project Stats -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <h2 class="section-title">Proje İstatistikleri</h2>
+        <div class="overview-grid fade-in">
+            <div class="overview-card">
+                <i class="fas fa-project-diagram"></i>
+                <h3>7</h3>
+                <p>Tamamlanmış Proje</p>
+            </div>
+            
+            <div class="overview-card">
+                <i class="fas fa-code"></i>
+                <h3>15+</h3>
+                <p>Kullanılan Teknoloji</p>
+            </div>
+            
+            <div class="overview-card">
+                <i class="fas fa-trophy"></i>
+                <h3>1</h3>
+                <p>Yarışma Katılımı (TEKNOFEST)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Ahmet Eren Yağlı. Tüm hakları saklıdır.</p>
+        <p>
+            <a href="https://github.com/AErenYagli" target="_blank">GitHub</a> • 
+            <a href="https://www.linkedin.com/in/ahmet-eren-ya%C4%9Fli-730b751ba/" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+    
+    <!-- Project Filter Script -->
+    <script>
+        // Project Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filterValue === 'all') {
+                        card.style.display = 'flex';
+                    } else {
+                        if (card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
