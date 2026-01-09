@@ -21,8 +21,14 @@
     
     /* Gradient Renkler */
     --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-1-start: #667eea;
+    --gradient-1-end: #764ba2;
     --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-2-start: #f093fb;
+    --gradient-2-end: #f5576c;
     --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --gradient-3-start: #4facfe;
+    --gradient-3-end: #00f2fe;
     
     /* Geçiş Süreleri */
     --transition-fast: 0.2s ease;
@@ -250,40 +256,72 @@ body {
     flex-wrap: wrap;
 }
 
-/* Butonlar */
+/* ============================================
+   BUTONLAR - GÜNCELLENMIŞ
+   ============================================ */
 .btn {
     padding: 0.875rem 2rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 50px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all var(--transition-normal);
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .btn-primary {
-    background: var(--gradient-1);
+    background: linear-gradient(135deg, var(--gradient-1-start), var(--gradient-1-end));
     color: white;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #5568d3, #6d42a1);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
 }
 
 .btn-secondary {
-    background-color: transparent;
+    background: transparent;
     color: var(--accent-primary);
+    padding: 0.875rem 2rem;
     border: 2px solid var(--accent-primary);
+    border-radius: 50px;
 }
 
 .btn-secondary:hover {
-    background-color: var(--accent-primary);
+    background: var(--accent-primary);
     color: white;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Dark tema için butonlar */
+[data-theme="dark"] .btn-primary {
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.6);
+}
+
+[data-theme="dark"] .btn-secondary {
+    border-color: var(--accent-secondary);
+    color: var(--accent-secondary);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background: var(--accent-secondary);
+    color: var(--bg-primary);
 }
 
 /* Skills Preview Badges */
@@ -379,16 +417,17 @@ body {
 }
 
 /* ============================================
-   OVERVIEW SECTION (Index)
+   OVERVIEW SECTION (Ana Sayfa Kartlar)
    ============================================ */
 .overview-section {
-    background-color: var(--bg-secondary);
+    padding: 5rem 2rem;
 }
 
 .overview-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-top: 3rem;
 }
 
 .overview-card {
@@ -423,42 +462,84 @@ body {
 .overview-card p {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
+.overview-card .card-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem;
+    margin-top: 0 !important;
+}
+
+.overview-card .card-link i,
+.overview-card .card-link .fas,
+.overview-card .card-link .fa {
+    position: relative !important;
+    top: 0 !important;
+    transform: translateY(0) !important;
+    vertical-align: middle !important;
+    line-height: inherit !important;
+}
 .card-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem;
     color: var(--accent-primary);
     text-decoration: none;
     font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: gap var(--transition-fast);
+    transition: all var(--transition-normal);
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+.card-link i,
+.card-link .fas,
+.card-link .fa {
+    font-size: 1em !important;
+    line-height: 1.5 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    vertical-align: middle !important;
+    position: relative !important;
+    top: 0 !important;
 }
 
 .card-link:hover {
-    gap: 1rem;
+    color: var(--accent-hover);
+}
+
+.card-link:hover i {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
 }
 
 /* ============================================
-   ABOUT SECTION
+   ABOUT PAGE
    ============================================ */
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 3rem;
     align-items: start;
+}
+
+.about-text {
+    line-height: 1.8;
 }
 
 .about-text h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: var(--accent-primary);
+    color: var(--text-primary);
 }
 
 .about-text p {
     color: var(--text-secondary);
-    margin-bottom: 1rem;
-    line-height: 1.8;
+    margin-bottom: 1.5rem;
 }
 
 .about-info {
@@ -472,26 +553,21 @@ body {
 
 .info-item {
     display: flex;
-    align-items: center;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.info-item:last-child {
-    border-bottom: none;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .info-item i {
     color: var(--accent-primary);
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    width: 30px;
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
 }
 
 .info-item .label {
     font-weight: 600;
-    margin-right: 0.5rem;
     color: var(--text-primary);
+    min-width: 100px;
 }
 
 .info-item .value {
@@ -499,76 +575,64 @@ body {
 }
 
 .info-item .value a {
-    color: var(--text-secondary);
+    color: var(--accent-primary);
     text-decoration: none;
-    transition: color var(--transition-fast);
 }
 
 .info-item .value a:hover {
-    color: var(--accent-primary);
+    color: var(--accent-hover);
 }
 
-/* Interest Tags */
+/* İlgi Alanları */
 .interest-tag {
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
     background-color: var(--bg-secondary);
-    color: var(--text-primary);
     padding: 0.4rem 0.8rem;
     border-radius: 15px;
     font-size: 0.85rem;
+    color: var(--text-primary);
 }
 
-/* Eğitim Timeline */
-.education-timeline {
-    margin-top: 2rem;
-    position: relative;
-    padding-left: 2rem;
+.interest-tag i {
+    font-size: 0.9rem;
+    color: var(--accent-primary);
 }
 
-.education-timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--gradient-1);
+/* Timeline */
+.timeline-item,
+.education-timeline .timeline-item {
+    background-color: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow);
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--accent-primary);
+    transition: all var(--transition-normal);
 }
 
-.timeline-item {
-    position: relative;
-    margin-bottom: 2rem;
-    padding-left: 2rem;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -2.5rem;
-    top: 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--accent-primary);
-    border: 3px solid var(--bg-primary);
+.timeline-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 6px 20px var(--shadow-hover);
 }
 
 .timeline-item h4 {
-    color: var(--accent-primary);
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
 }
 
 .timeline-item .date {
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    color: var(--accent-primary);
+    font-weight: 600;
     margin-bottom: 0.5rem;
+    display: block;
 }
 
 .timeline-item p {
     color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 /* Experience Section */
@@ -578,8 +642,8 @@ body {
 
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
     margin-top: 2rem;
 }
 
@@ -589,56 +653,57 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 15px var(--shadow);
     transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 25px var(--shadow-hover);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px var(--shadow-hover);
 }
 
 .company-logo {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
     background: var(--gradient-1);
-    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
 }
 
 .experience-card h4 {
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
     color: var(--text-primary);
+    margin: 0;
 }
 
 .experience-card .company {
-    font-weight: 600;
     color: var(--accent-primary);
-    margin-bottom: 0.3rem;
+    font-weight: 600;
+    font-size: 0.95rem;
 }
 
 .experience-card .date {
-    font-size: 0.85rem;
     color: var(--text-muted);
-    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .experience-card .description {
-    font-size: 0.9rem;
     color: var(--text-secondary);
     line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 /* ============================================
-   SKILLS SECTION
+   SKILLS PAGE
    ============================================ */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
 }
 
@@ -652,26 +717,26 @@ body {
 
 .skill-category:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 30px var(--shadow-hover);
+    box-shadow: 0 8px 30px var(--shadow-hover);
 }
 
 .skill-category h3 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    color: var(--accent-primary);
+    color: var(--text-primary);
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
 .skill-category h3 i {
-    font-size: 1.8rem;
+    color: var(--accent-primary);
 }
 
 .skill-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .skill-item {
@@ -683,8 +748,9 @@ body {
 .skill-name {
     display: flex;
     justify-content: space-between;
+    font-weight: 600;
     color: var(--text-primary);
-    font-weight: 500;
+    font-size: 0.95rem;
 }
 
 .skill-bar {
@@ -704,8 +770,9 @@ body {
 /* Additional Skills */
 .additional-skills {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-top: 3rem;
 }
 
 .skill-category-alt {
@@ -717,11 +784,15 @@ body {
 
 .skill-category-alt h3 {
     font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    color: var(--accent-primary);
+    margin-bottom: 1rem;
+    color: var(--text-primary);
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.skill-category-alt h3 i {
+    color: var(--accent-primary);
 }
 
 .badge-grid {
@@ -857,10 +928,22 @@ body {
     text-decoration: none;
     font-weight: 600;
     transition: all var(--transition-fast);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+.project-link i {
+    font-size: 1em;
+    line-height: 1.5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    vertical-align: middle;
 }
 
 .project-link.github {
@@ -881,6 +964,11 @@ body {
 .project-link.demo:hover {
     opacity: 0.9;
     transform: scale(1.05);
+}
+
+.project-link:hover i {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
 }
 
 /* ============================================
@@ -1012,36 +1100,71 @@ body {
 }
 
 /* ============================================
-   CTA SECTION
+   CTA SECTION - GÜNCELLENMIŞ
    ============================================ */
 .cta-section {
-    padding: 5rem 2rem;
-    background: var(--gradient-1);
+    background: linear-gradient(135deg, 
+        var(--gradient-1-start) 0%, 
+        var(--gradient-1-end) 100%);
+    padding: 4rem 2rem;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark tema için CTA Section */
+[data-theme="dark"] .cta-section {
+    background: linear-gradient(135deg, 
+        rgba(102, 126, 234, 0.15) 0%, 
+        rgba(118, 75, 162, 0.15) 100%);
 }
 
 .cta-content h2 {
     font-size: 2.5rem;
-    color: white;
     margin-bottom: 1rem;
+    color: white;
+}
+
+[data-theme="dark"] .cta-content h2 {
+    color: var(--text-primary);
 }
 
 .cta-content p {
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.95);
 }
 
-.cta-content .btn {
-    background-color: white;
-    color: var(--accent-primary);
+[data-theme="dark"] .cta-content p {
+    color: var(--text-secondary);
 }
 
-.cta-content .btn:hover {
-    background-color: var(--bg-secondary);
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+/* İletişime Geçin Butonu - KONTRAST DÜZELTMESİ */
+.cta-section .btn-primary {
+    background: linear-gradient(135deg, 
+        var(--gradient-2-start), 
+        var(--gradient-2-end));
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+    transition: all var(--transition-normal);
 }
+
+
+
+.cta-section .btn-primary:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* Dark tema için CTA buton */
+[data-theme="dark"] .cta-section .btn-primary {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    box-shadow: 0 10px 30px rgba(245, 87, 108, 0.5);
+}
+
 
 /* ============================================
    FOOTER
@@ -1099,3 +1222,133 @@ body {
 .scroll-top.visible {
     display: flex;
 }
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--bg-card);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px var(--shadow);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .about-content,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-info {
+        position: static;
+    }
+
+    .overview-grid,
+    .skills-grid,
+    .additional-skills,
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .hero {
+        padding: 5rem 1rem 2rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .page-header {
+        padding: 6rem 1rem 3rem;
+    }
+
+    .page-header-content h1 {
+        font-size: 2rem;
+    }
+
+    .overview-grid {
+        gap: 1.5rem;
+    }
+
+    .overview-card {
+        padding: 1.5rem;
+    }
+
+    .projects-grid,
+    .featured-projects {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .scroll-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
