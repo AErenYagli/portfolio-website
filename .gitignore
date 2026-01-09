@@ -1,8 +1,3 @@
-# VS Code'da dosya oluştur
-# Sol panelde New File > .gitignore
-```
-
-`.gitignore` içeriği:
 ```
 # Operating System Files
 .DS_Store
