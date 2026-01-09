@@ -155,30 +155,3 @@ Proje Linki: [https://github.com/AErenYagli/portfolio-website](https://github.co
 ⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!
 ```
 ```
-# .gitignore
-
-# Operating System Files
-.DS_Store
-Thumbs.db
-
-# Editor directories and files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# Personal files
-personal-notes.txt
