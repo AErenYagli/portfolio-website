@@ -141,9 +141,9 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosy
 
 ## 📧 İletişim
 
-Lor - [@yourusername](https://twitter.com/yourusername) - lor@example.com
+Ahmet Eren Yağlı - [Linkedin](https://www.linkedin.com/in/ahmet-eren-ya%C4%9Fli-730b751ba/)
 
-Proje Linki: [https://github.com/yourusername/portfolio-website](https://github.com/yourusername/portfolio-website)
+Proje Linki: [https://github.com/AErenYagli/portfolio-website](https://github.com/AErenYagli/portfolio-website)
 
 ## 🙏 Teşekkürler
 
